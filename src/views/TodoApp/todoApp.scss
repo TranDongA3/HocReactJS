@@ -1,0 +1,38 @@
+button{
+    cursor: pointer;
+}
+.container{
+    margin-bottom: 200px;
+    .input-list{
+       
+        padding: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .list-todo{
+        padding: 10px;
+        margin-bottom: 10px;
+        text-align: left;
+        width: 500px;
+       
+        .block-item{
+            &:first-child{
+                border-top: 1px solid #ccc;
+            }
+
+            border-bottom: 1px solid #ccc;
+        }
+        .edit{
+            margin-top: 5px;
+            float: right;
+            background-color: blueviolet;
+        }
+        .delete{
+            float: right;
+            margin-top: 5px;
+            background-color: red;
+        }
+    }
+   
+}
