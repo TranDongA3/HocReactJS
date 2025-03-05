@@ -1,38 +1,101 @@
-button{
+/* Định dạng chung cho container */
+.container {
+    width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Định dạng phần nhập todo */
+  .input-list {
+    margin-bottom: 15px;
+  }
+  
+  /* Định dạng danh sách todo */
+  .list-todo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  /* Định dạng từng item trong danh sách */
+  .block-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: background-color 0.3s;
+    text-align: center;
+    .item{
+        margin: auto;
+    }
+  }
+  
+  /* Hiệu ứng hover khi di chuột vào todo */
+  .block-item:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Định dạng số thứ tự và tiêu đề todo */
+  .block-item span {
+    flex: 1;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    // text-align: center;
+  }
+  
+  /* Định dạng input khi chỉnh sửa */
+  .block-item input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+  }
+  
+  /* Định dạng nút */
+  button {
+    padding: 6px 10px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
     cursor: pointer;
-}
-.container{
-    margin-bottom: 200px;
-    .input-list{
-       
-        padding: 10px;
-        margin-bottom: 10px;
-        text-align: center;
-    }
-
-    .list-todo{
-        padding: 10px;
-        margin-bottom: 10px;
-        text-align: left;
-        width: 500px;
-       
-        .block-item{
-            &:first-child{
-                border-top: 1px solid #ccc;
-            }
-
-            border-bottom: 1px solid #ccc;
-        }
-        .edit{
-            margin-top: 5px;
-            float: right;
-            background-color: blueviolet;
-        }
-        .delete{
-            float: right;
-            margin-top: 5px;
-            background-color: red;
-        }
-    }
-   
-}
+    transition: all 0.3s;
+  }
+  
+  /* Nút Edit */
+  button.edit {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  button.edit:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Nút Delete */
+  button.delete {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  button.delete:hover {
+    background-color: #b02a37;
+  }
+  
+  /* Nút Save */
+  button.save {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  button.save:hover {
+    background-color: #1e7e34;
+  }

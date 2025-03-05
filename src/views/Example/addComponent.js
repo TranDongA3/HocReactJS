@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./about.scss";
 class AddComponent extends React.Component {
   state = {
     title: "",
@@ -29,22 +29,30 @@ class AddComponent extends React.Component {
   render() {
     return (
       <>
+        <div className="container">
+        <div className="job">
         <label>Job's Title</label>
         <input
           className="title"
           value={this.state.title}
           onChange={(event) => this.handleCode(event, "title")}
         />
+        </div>
+        <div className="salary">
         <label>Salary</label>
+        
         <input
-          className="salary"
+          
           value={this.state.salary}
           onChange={(event) => this.handleCode(event, "salary")}
         />
+       
+        </div>
 
         <button type="submit" onClick={(event) => this.handleClick(event)}>
           Submit
         </button>
+        </div>
       </>
     );
   }

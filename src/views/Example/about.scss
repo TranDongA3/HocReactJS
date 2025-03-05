@@ -1,0 +1,56 @@
+/* Định dạng container chính */
+.container {
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Định dạng từng dòng nhập */
+  .job,
+  .salary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  /* Định dạng nhãn (label) */
+  .job label,
+  .salary label {
+    flex: 1; /* Cho phép nhãn chiếm không gian đều */
+    text-align: left;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Định dạng ô nhập (input) */
+  .job input,
+  .salary input {
+    flex: 2; /* Cho phép input chiếm nhiều không gian hơn */
+    text-align: right;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* Định dạng nút submit */
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #04AA6D;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #038a58;
+  }
+  

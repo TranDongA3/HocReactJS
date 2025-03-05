@@ -53,7 +53,7 @@ class TodoList extends React.Component {
           <div className="list-todo">
             {listTodo.map((item, index) => (
               <div className="block-item" key={item.id}>
-                <div>
+                <div className="item">
                   {edit.id === item.id ? (
                     <>
                       <span>
@@ -82,7 +82,9 @@ class TodoList extends React.Component {
                     </>
                   ) : (
                     <>
-                      <span>{index + 1} - {item.title}</span>
+                      <span>
+                        {index + 1} - {item.title}
+                      </span>
                       <button
                         className="edit"
                         onClick={() => this.editTodo(item)}
